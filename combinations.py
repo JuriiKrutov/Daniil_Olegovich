@@ -7,9 +7,10 @@ combin = itertools.permutations(data)
 
 with open('combinations.txt', 'w') as file:
     for i in combin:
-        file.write(f'{text}: ')
+        file.write(f'{text} ')
         for j in i:
             file.write(j)
         file.write('\n')
+
 
 
