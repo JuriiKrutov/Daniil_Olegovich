@@ -14,10 +14,10 @@ def batton_clic():
     combin = itertools.permutations(data, int(char_data))
     if int(char_data) <= len(data):
         for i in combin:
-            a = f"{text} "
+            output_str = f"{text} "
             for j in i:
-                a += j + char
-            field.insert(0.0, f'{a[:-1]}\n')
+                output_str += j + char
+            field.insert(0.0, f'{output_str[:-1]}\n')
     else:
         field.insert(0.0, 'Количество знаков не должно превышать количество вводимых данных')
 
