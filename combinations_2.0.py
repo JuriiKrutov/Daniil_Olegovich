@@ -17,7 +17,7 @@ def batton_clic():
             output_str = f"{text} "
             for j in i:
                 output_str += j + char
-            field.insert(0.0, f'{output_str[:-1]}\n')
+            field.insert(0.0, f'{output_str if char == "" else output_str[:-1]}\n')
     else:
         field.insert(0.0, 'Количество знаков не должно превышать количество вводимых данных')
 
