@@ -14,7 +14,7 @@ def batton_clic():
     combin = itertools.permutations(data, int(char_data))
     if int(char_data) <= len(data):
         for i in combin:
-            output_str = f"{text} "
+            output_str = f"{text + ' ' if text else ''}"
             for j in i:
                 output_str += j + char
             field.insert(0.0, f'{output_str if char == "" else output_str[:-1]}\n')
