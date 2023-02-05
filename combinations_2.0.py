@@ -2,7 +2,7 @@ from tkinter import *
 from tkinter import ttk
 import itertools
 
-def batton_clic():
+def batton_clic(event):
     field = Text(root, width=25, height=10, wrap=WORD)
     field.grid(column=0, row=5, columnspan=2)
     text = text_input.get()
@@ -44,6 +44,8 @@ char_input = ttk.Entry(root, width=20)
 char_input.grid(column=1, row=3)
 
 btn = ttk.Button(root, text='OK', command=batton_clic)
+btn.bind('<Return>', batton_clic)
+btn.bind('<Button-1>', batton_clic)
 btn.grid(column=0, row=4, columnspan=2, ipadx=70, ipady=3, padx=5, pady=5)
 
 root.mainloop()
