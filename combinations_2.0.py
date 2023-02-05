@@ -15,9 +15,10 @@ def batton_clic():
     if int(char_data) <= len(data):
         for i in combin:
             field.insert(0.0, '\n')
+            a = f"{text} "
             for j in i:
-                field.insert(0.0, f'{j}' + char)
-            field.insert(0.0, f'{text} ')
+                a += j + char
+            field.insert(0.0, a[:-1])
     else:
         field.insert(0.0, 'Количество знаков не должно превышать количество вводимых данных')
 
